@@ -1,0 +1,28 @@
+remove numpy and scipy from requirements.txt
+
+web: gunicorn app:app --log-file=- --worker-class gevent
+
+
+
+
+heroku buildpacks:set heroku/python
+heroku buildpacks:add https://github.com/stomita/heroku-buildpack-phantomjs
+
+heroku create --buildpack 
+
+heroku buildpacks:add https://github.com/andrewychoi/heroku-buildpack-scipy
+
+heroku buildpacks:remove https://github.com/thenovices/heroku-buildpack-scipy
+
+heroku buildpacks:add https://github.com/kennethreitz/anaconda-buildpack
+
+
+in requirements:
+	numpy==1.10.2 -> 1.9.2
+	scipy -> 0.15.1
+
+
+heroku config:add BUILDPACK_URL=
+
+
+git+git://github.com/zwopple/heroku-gevent.git

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <section class="wrapper style1 align-center">
+    <div class="container">
+    
+      <header>
+        <h2>Domain Name Look-Up</h2>
+        <p>Search GoDaddy automatically using keywords or a list of URLs.<br/>Get a table with their availability and prices.</p>
+      </header>
+
+      <div class="row 200%">
+        <section class="6u 12u$(small)">
+          <form action="{{ url_for('list') }}">
+            <button class="icon big rounded fa-list"></button>
+          </form>
+          <p>Look up a list of domain names.</p>
+        </section>
+        <section class="4u$ 12u$(small)">
+          <form action="{{ url_for('keywords') }}">
+            <button class="icon big rounded fa-key"></button>
+          </form>
+          <p>Enter keywords to look up domain names.</p>
+        </section>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}

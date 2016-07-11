@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script>
+    $(document).ready( function () {
+        $('#results').DataTable({bFilter: false, dom: 'lBfrtip', buttons: ['copy', 'csv', 'pdf', 'print', 'colvis']});
+    } );
+</script>
+
+  <section class="wrapper style1 align-center">
+    <div class="container">
+      <header>
+        <h2 id="results_header">Here are your results!</h2>
+        
+    <div id="results_table">
+			<table id="results" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Domain</th>
+      <th>Availability</th>
+      <th>1<sup>st</sup> Year Price</th>
+      <th>Renewal Price</th>
+      <th>Minimum Offer Price</th>
+      <th>Buy it Now Price</th>
+      <th>GoDaddy Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>shophelper.com</td>
+      <td>Yes</td>
+      <td>$5,000</td>
+      <td>$14.99</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=buyinghelp.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>buyhelper.com</td>
+      <td>Yes</td>
+      <td>$2,895</td>
+      <td>$14.99</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=buyinghelp.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>helperbuying.com</td>
+      <td>Yes</td>
+      <td>$2.99</td>
+      <td>$14.99</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=buyinghelp.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>buyinghelp.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=buyinghelp.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>helpshop.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=buyinghelp.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>buyhelp.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=buyinghelp.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>helpershop.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=helpershop.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>buyinghelper.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=helpershop.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>helpbuy.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=helpershop.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>shophelp.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=helpershop.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>helperbuy.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=helpershop.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+    <tr>
+      <td>helpbuying.com</td>
+      <td>No</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td><a href="https://www.godaddy.com/domains/searchresults.aspx?checkAvail=1&domainToCheck=helpershop.com" style="color: white; text-decoration: none;">click here</a></td>
+    </tr>
+  </tbody>
+</table>
+		</div>
+
+		</header>
+	</div>
+</section>
+
+{% endblock %}

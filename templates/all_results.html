@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <section class="wrapper style1 align-center">
+    <div class="container">
+      <header>
+        <h2>Your Results</h2>
+        
+        {{table_data|safe}}
+
+		</header>
+	</div>
+</section>
+
+{% endblock %}

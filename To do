@@ -1,0 +1,29 @@
+Urgent
+	Fix scraping issue - crimedata.com found as available
+	Fix threading / socketio issue - why doesn't it send messages after the first?
+	Allow domain masking while also allowing refresh of same page (need /queue/...)
+	Fix slow widening to the right during loading issue
+	memory issue
+		see how much memory I have
+		see how much memory a browser uses / where I'm using it
+		queue users in case I get many requests
+	check user input and validate before they can submit
+	have page refresh when result is found: long-polling, web-sockets, server-sent events, an AJAX request every N seconds
+		make animation while getting results
+
+Medium urgent
+	make it stop when someone hits back
+	compute and flash estimated wait time based on # of domains
+	display 'sorry error' text for urls that didn't work, also keep track of them
+	Remove processes aborted in the middle (esp Phatomjs) - check what Flask does
+	use threads within users if have enough memory
+	disable unnecessary javascript files in selenium
+
+Small issues
+	Unique id (UUID postgres) for user id
+	make example page for keywords
+	make a funny error page
+	estimate time / say how long it usually takes for X number of domains
+	check that they can alter URL and it still works?
+	add godaddy link to csv (rather than 'N/A')
+	change url that appears in browser

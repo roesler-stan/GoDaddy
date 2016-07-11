@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script>
+    $(document).ready( function () {
+        $('#results').DataTable({bFilter: false, dom: 'lBfrtip', buttons: ['copy', 'csv', 'pdf', 'print', 'colvis']});
+    } );
+</script>
+
+  <section class="wrapper style1 align-center">
+    <div class="container">
+      <header>
+        <h2 id="results_header">Here are your results!</h2>
+        
+    <div id="results_table">
+			{{table_data|safe}}
+		</div>
+
+		</header>
+	</div>
+</section>
+
+{% endblock %}

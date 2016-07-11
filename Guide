@@ -1,0 +1,5 @@
+
+redis-server
+celery -A tasks worker --loglevel=info -E
+
+python app.py

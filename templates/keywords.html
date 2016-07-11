@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="wrapper style1 align-center">
+	<div class="container">
+		<form method='post' action="{{ url_for('queue') }}">
+			<input type="hidden" name="form_type" value="keywords">
+			<p id="search_text_title">Please input the keywords you'd like to search for below.</p>
+
+			<p id="keywords_text_top_small">Please separate each keyword with a comma.</p>
+
+			<p id="keywords_option">Option 1: Combine all possible pairs of a list of keywords</p>
+		    <div>
+		    	<label id="text_input_label">Keyword(s):</label>
+			    <input id="text_input" type='text' name='keywords_allcombos' placeholder = "word1, word2">
+			</div>
+			
+			<p id="keywords_option">Option 2: Combine keywords from two particular groups</p>
+		    <div>
+		    	<label id="text_input_label" for="keywords1">1<sup>st</sup> Keyword(s):</label>
+		    	<input id="text_input" type='text' name='keywords1' placeholder = "word1, word2">
+			</div>
+		    
+		    <div>
+		    	<label id="text_input_label" for="keywords2">2<sup>nd</sup> Keyword(s):</label>
+		    	<input id="text_input" type='text' name='keywords2' placeholder = "word1, word2">
+			</div>
+
+			<div>
+				<label id="keywords_unordered_label" for="keywords_unordered">Do you also want keyword 2 + keyword 1 combinations?</label>
+				<input id="keywords_unordered" type='checkbox' name='keywords_unordered' value="yes">
+				<label id="keywords_unordered_label" for="keywords_unordered">Yes</label>
+			</div>
+
+			<p id="search_text_bottom">Please choose one or more extensions to search for.</p>
+			<div>
+				<input type='checkbox' name='extensions' id="com" value="com">
+				<label for="com">.com</label>
+				<input type='checkbox' name='extensions' id="net" value="net">
+				<label for="net">.net</label>
+				<input type='checkbox' name='extensions' id="org" value="org">
+				<label for="org">.org</label>
+				<input type='checkbox' name='extensions' id="gov" value="gov">
+				<label for="gov">.gov</label>
+				<input type='checkbox' name='extensions' id="edu" value="edu">
+				<label for="edu">.edu</label>
+				<input type='checkbox' name='extensions' id="io" value="io">
+				<label for="io">.io</label>
+			</div>
+			   	
+	    	<input type='submit' value='Submit'>
+	    </form>
+
+	</div>
+</section>
+
+{% endblock %}

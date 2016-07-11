@@ -1,0 +1,18 @@
+initdb -D /usr/local/var/postgres/
+
+pg_ctl -D /usr/local/var/postgres/ -l logfile start
+
+rm -rf /usr/local/var/postgres
+initdb /usr/local/var/postgres -E utf8
+
+
+vim /usr/local/share/postgresql/postgresql.conf
+
+createdb
+psql -h localhost
+
+
+
+python
+from app import db
+db.create_all()

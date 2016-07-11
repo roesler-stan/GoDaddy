@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+   		<title>Look Up Domainz</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="domain name price lookup" />
+		<meta name="keywords" content="domains,domain,lookup,search,godaddy" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="{{url_for('static', filename='js/jquery.js') }}">\x3C/script>')</script>
+		<script src="{{url_for('static', filename='js/jquery.dataTables.js') }}"></script>
+		<script src="{{url_for('static', filename='js/dataTables.buttons.js') }}"></script>
+		<script src="{{url_for('static', filename='js/buttons.colVis.js') }}"></script>
+		<script src="{{url_for('static', filename='js/buttons.flash.js') }}"></script>
+		<script src="{{url_for('static', filename='js/buttons.html5.js') }}"></script>
+		<script src="{{url_for('static', filename='js/buttons.print.js') }}"></script>
+  		<script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+  		<script src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+  		<script src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+		<script src="{{url_for('static', filename='js/loader.js') }}"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/skel.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style-xlarge.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='font-awesome/css/font-awesome.min.css') }}">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/jquery.dataTables.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/buttons.dataTables.min.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/loader.css') }}">
+
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+	    <ul class=flashes>
+	    {% for message in messages %}
+	      <li>{{ message }}</li>
+	    {% endfor %}
+	    </ul>
+	  {% endif %}
+	{% endwith %}
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-68048121-2', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+	</head>
+
+  <!-- Remove  class="landing"  to have black menu bar on top -->
+  <body class="landing">
+
+{% if error %}
+  <p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+
+	<!-- Header -->
+	  <header id="header">
+	    <h1><a href="{{ url_for('index') }}">Look Up Domainz</a></h1>
+	    <nav id="nav">
+	      <ul>
+	        <li><a href="{{ url_for('index') }}">Home</a></li>
+	      </ul>
+	    </nav>
+	  </header>
+
+	{% block content %}{% endblock %}
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<section class="4u 12u(medium) 12u$(small)">
+							<h3>We are not GoDaddy</h3>
+							<p>This site is not sponsored by or affiliated with <a href="GoDaddy.com">GoDaddy.com</a> in any way.</p>
+						</section>
+
+						<section class="2u 12u(medium) 12u$(small)">
+							<h3>  </h3>
+						</section>
+
+						<section class="4u 12u(medium) 12u$(small)">
+							<h3>Contact Me</h3>
+							<ul class="tabular">
+								<li>
+									<h4>LinkedIn</h4>
+									<a href="http://www.linkedin.com/pub/katharina-roesler/14/58/706/">Katharina Roesler</a>
+								</li>
+								<li>
+									<h4>Website</h4>
+									<a href="http://kroesler.com">kroesler.com</a>
+								</li>
+							</ul>
+						</section>
+					</div>
+					<ul class="copyright">
+						<li>&copy; Katharina Roesler. All rights reserved.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>

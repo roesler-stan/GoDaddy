@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		namespace = '/test'; // change to an empty string to use the global namespace
+        
+        // the socket.io documentation recommends sending an explicit package upon connection
+        // this is especially important when using the global namespace
+        var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+        
+        // event handler for server sent data
+        socket.on('my response', function(msg) {
+	        if (msg.data  = 'results ready') {
+		        window.location.reload(true);
+		    }
+        });
+    });
+</script>
+
+<section class="wrapper style1 align-center">
+    <div class="container">
+      <header>
+        <h2 id="results_header">We're working on it!</h2>
+
+		</header>
+	</div>
+</section>
+
+<div id="loader-wrapper">
+	<div id="loader"></div>
+
+	<div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+</div>
+
+{% endblock %}
